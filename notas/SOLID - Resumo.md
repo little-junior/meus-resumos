@@ -94,7 +94,7 @@
 
 ### I - Interface Segregation Principle (ISP)<a name="isp"></a>
 
-***Uma entidade não deve ser forçada a implementar interfaces e métodos das quais não faz uso
+***Uma entidade não deve ser forçada a implementar interfaces e métodos das quais não faz uso***
 
 - Ao invés de criar interfaces genéricas, é ideal criar interfaces específicas que cumprem seu papel (SRP) e não ferem as implementações (IRP).
 - Se uma classe possui um método implementado que não está sendo usado, é necessário quebrar a interface em "sub interfaces".
