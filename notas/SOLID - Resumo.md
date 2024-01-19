@@ -68,7 +68,7 @@
 
 <br/>
 
-### L - Liskov Substitution Principle (LSP) <a name="lsp"</a>
+### L - Liskov Substitution Principle (LSP) <a name="lsp"></a>
 
 ***Uma classe base deve ser substituível por qualquer uma de suas classes derivadas sem modificar o comportamento***
 
