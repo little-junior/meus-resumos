@@ -55,7 +55,7 @@
 - Possibilita que o sistema reaja e responda aos eventos adequadamente, mantendo a integridade do software.
 
 
-## Implementação do DDD e seus padrões internos
+## Implementação do DDD e seus padrões internos no .NET
 
 - Implementar as regras técnicas do DDD pode ser um obstáculo, mas deve focar em:
 	- Organizar o código para ficar alinhado com os problemas do negócio.
@@ -64,7 +64,39 @@
 - **Atenção**: Recomenda-se usar a abordagem DDD apenas em microserviços complexos, com regras de negócio profundas.
 
 
+### Camadas (layers) de uma aplicação com abordagem DDD
 
+- As camadas de uma aplicação que aborda o DDD normalmente se concentra em três:
+	- Application Layer
+	- Domain model Layer
+	- Infrastructure Layer
+
+- Cada uma das camadas é um projeto, fazendo com que a comunicação entre elas fique claro.
+
+![[dddlayers.png]]
+https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
+#### Domain Model Layer
+
+- É o coração da aplicação, sendo responsável por representar os conceitos do negócio, como suas informações e regras.
+- É onde o negócio é expressado, sendo uma Class Library com as domain entities POCOs, e sem qualquer dependência com as demais camadas ou frameworks.
+
+#### Application Layer
+
+- Define o que a aplicação deve fazer e direciona os objetos do domínio para trabalhar nos problemas.
+- Responsável pelos trabalhos do sistema, mas também pela interação com a camada de application de outros sistemas.
+- Não contém regras ou conhecimento do sistema.
+- Normalmente implementado como um projeto ASP.NET Core Web API, que aborda a interação do microserviço, seu acesso remoto, e conexões com APIs externas.
+- É a camada onde são implementadas os casos de usos dependentes da parte front-end do sistema.
+
+
+#### Infrastructure Layer
+
+- Camada da persistência de dados, que faz a relação com o banco de dados ou qualquer outro armazenamento.
+- Não deve influenciar a camada de domain model, mas sim depender dela.
+
+
+![[dddlayersdependencies.png]]
+https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
 
 
 
