@@ -73,7 +73,7 @@
 
 - Cada uma das camadas é um projeto, fazendo com que a comunicação entre elas fique claro.
 
-![[dddlayers.png]]
+![ddd layers](../media/dddlayers.png)
 https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
 #### Domain Model Layer
 
@@ -95,7 +95,7 @@ https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice
 - Não deve influenciar a camada de domain model, mas sim depender dela.
 
 
-![[dddlayersdependencies.png]]
+![ddd layers dependencies](../media/dddlayersdependencies.png)
 https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
 
 

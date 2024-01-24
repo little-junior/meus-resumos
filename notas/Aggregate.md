@@ -16,7 +16,7 @@
 	- Todos os componentes do aggregate que não são o root devem ser readonly e não podem possuir métodos que mudem seus estados. Tudo isso deve estar no root.
 - Todas as modificações e operações dentro de um aggregate são tratadas como uma unidade única de trabalho, que são persistidas ou descartadas juntas.
 
-![[aggregateexample.png]]
+![aggregate example](../media/aggregateexample.png)
 https://medium.com/@edin.sahbaz/exploring-the-power-of-aggregates-in-domain-driven-design-and-clean-architecture-6408d6128d3b
 
 ## Benefícios 
